@@ -1,0 +1,134 @@
+.login-container {
+  width: 1000px;
+  height: 588px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 90px;
+  margin-left: 250px;
+  box-shadow: 0px 47px 86px -28px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.gym {
+  width: 90px;
+  height: 90px;
+  margin-top: 56px;
+  margin-left: 101px;
+}
+
+.titulo-login {
+  margin-top: 78px;
+  margin-left: -6px;
+  color: rgb(40, 195, 135);
+}
+
+.subtitulo {
+  margin-top: 106px;
+  margin-left: -113px;
+  color: rgb(40, 195, 135);
+}
+
+.user {
+  margin-top: 195px;
+  margin-left: -88px;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  min-width: max-content;
+  flex: 0 0 auto;
+}
+
+.texmoti {
+  margin-top: 231px;
+  margin-left: 120px;
+  position: absolute;
+  max-width: 378px;
+  color: rgb(85, 214, 165);
+  font-style: italic;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin-top: 271px;
+  margin-left: -175px;
+}
+
+.icono-user {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  margin-left: 224px;
+  margin-bottom: -45px;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.input-login {
+  width: 250px;
+  height: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.password {
+  margin-top: 68px;
+  width: 30px;
+  height: 30px;
+  margin-left: 224px;
+  margin-bottom: -45px;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.boton-login {
+  width: 140px;
+  height: 40px;
+  background-color: rgb(40, 195, 135);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 58px;
+}
+
+.boton-register {
+  cursor: pointer;
+  margin-left: -44px;
+  margin-top: 17px;
+  background-color: transparent;
+  width: 126px;
+  border: none;
+  text-decoration: underline rgb(99, 197, 202);
+}
+
+.boton-olvido {
+  cursor: pointer;
+  margin-left: 136px;
+  margin-top: -16px;
+  background-color: transparent;
+  width: 174px;
+  border: none;
+  text-decoration: underline rgb(99, 197, 202);
+}
+
+.informacion {
+  margin-top: 494px;
+  margin-left: 120px;
+  position: absolute;
+  max-width: 414px;
+  color: black;
+  font-style: italic;
+}
+
+.articulo {
+  width: 352px;
+  height: 592px;
+  margin-top: -4px;
+  margin-left: 167px;
+  transform: skewx(-24deg);
+  box-shadow: 0px 0px 73px -36px rgba(0, 0, 0, 1);
+}

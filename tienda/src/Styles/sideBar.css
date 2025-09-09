@@ -1,0 +1,17 @@
+.log {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+
+html[data-toolpad-color-scheme='light'] .log {
+  filter: brightness(0);
+}
+
+
+html[data-toolpad-color-scheme='dark'] .log {
+  filter: brightness(0) invert(1);
+}
