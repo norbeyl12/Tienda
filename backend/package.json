@@ -1,0 +1,31 @@
+{
+  "name": "tienda-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Tienda application with AdventureWorks database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-new.js",
+    "dev": "nodemon server-new.js",
+    "start:old": "node server.js",
+    "test:connection": "node utils/testConnection.js",
+    "db:test": "node utils/testConnection.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mssql": "^10.0.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "express",
+    "mssql",
+    "adventureworks",
+    "api"
+  ],
+  "author": "Tienda Team",
+  "license": "MIT"
+}

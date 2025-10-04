@@ -11,11 +11,6 @@ import ProductCards from './ProductCards';
 
 const NAVIGATION: Navigation = [
   {
-    segment: 'dashboard',
-    title: 'Elementos',
-    icon: <DashboardIcon />,
-  },
-  {
     segment: 'orders',
     title: 'Orden',
     icon: <ShoppingCartIcon />,

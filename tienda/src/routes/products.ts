@@ -1,9 +1,6 @@
-// src/api/userApi.ts
+import axios from "axios";
 
-import { data } from "react-router-dom";
-import baseAPi from "./baseAPi";
-
-// 🔹 Define la estructura de un producto según tu API
+// 🔹 Define la estructura de un producto según tu API de AdventureWorks
 export interface Producto {
   id: string;
   name: string;
@@ -14,6 +11,7 @@ export interface Producto {
   stock: number;
   brand: string;
   image_url: string;
+  color?: string;
 }
 
 export const obtenerProductos = async (): Promise<{
@@ -22,16 +20,43 @@ export const obtenerProductos = async (): Promise<{
   error?: string;
 }> => {
   try {
-    // 🔹 Llamada GET simple (sin headers de auth)
-    const response = await baseAPi.get("/68b4d1b3ae596e708fde2aa7");
-    return { success: true, data: response.data.record.products };
-} catch (error: any) {
+    // 🔗 Conectar a tu API de AdventureWorks local
+    const response = await axios.get("http://localhost:3000/api/products");
+
+    return {
+      success: true,
+      data: response.data.data, // La respuesta viene en response.data.data
+    };
+  } catch (error: any) {
+    console.error("Error conectando a AdventureWorks:", error);
+
     if (error.response?.data) {
-        return {
-            success: false,
-            error: error.response.data.detail || "Error al obtener productos",
-        };
+      return {
+        success: false,
+        error:
+          error.response.data.error ||
+          "Error al obtener productos de AdventureWorks",
+      };
     }
-    return { success: false, error: "No se pudo conectar al servidor" };
+
+    // Si falla la conexión local, usar datos de respaldo
+    if (
+      error.code === "ECONNREFUSED" ||
+      error.message.includes("Network Error")
+    ) {
+      console.warn(
+        "⚠️  No se pudo conectar a la base de datos local, usando datos de respaldo"
+      );
+      return {
+        success: false,
+        error:
+          "No se pudo conectar a la base de datos AdventureWorks. Verifique que el servidor esté ejecutándose.",
+      };
+    }
+
+    return {
+      success: false,
+      error: "No se pudo conectar al servidor de AdventureWorks",
+    };
   }
 };

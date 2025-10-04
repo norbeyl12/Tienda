@@ -4,6 +4,7 @@ import PaginaPrincipal from "./pages/Pagina-Principal";
 import Admin from "./pages/Admin";
 import Crear from "./pages/Crear";
 import Recuperar from "./pages/Recuperar";
+import ClientForm from "./pages/ClientForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/recuperar" element={<Recuperar />} />
         <Route path="/principal" element={<PaginaPrincipal />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/client-form" element={<ClientForm />} />
       </Routes>
     </BrowserRouter>
   );

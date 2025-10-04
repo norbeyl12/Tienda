@@ -70,8 +70,27 @@
   height: 40px;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-left: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.input-login:focus {
+  outline: none;
+  border-color: rgb(40, 195, 135);
+}
+
+.input-error {
+  border-color: #ff4444 !important;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  display: block;
 }
 
 .password {
@@ -131,4 +150,60 @@
   margin-left: 167px;
   transform: skewx(-24deg);
   box-shadow: 0px 0px 73px -36px rgba(0, 0, 0, 1);
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 300px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideInRight 0.3s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+.toast-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border-left: 4px solid #1e7e34;
+}
+
+.toast-error {
+  background: linear-gradient(135deg, #dc3545, #e74c3c);
+  color: white;
+  border-left: 4px solid #c82333;
+}
+
+.toast-warning {
+  background: linear-gradient(135deg, #ffc107, #ffb347);
+  color: #212529;
+  border-left: 4px solid #e0a800;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
